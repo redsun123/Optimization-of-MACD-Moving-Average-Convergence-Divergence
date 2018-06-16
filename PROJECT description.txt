@@ -1,0 +1,57 @@
+##-------------------------------------------------------------------------------------
+## PROJECT (Author: GitHub user “redsun123“)
+##
+## Finding optimal parameters for MACD 
+## (Moving Average Convergence-Divergence) stock trading indicator
+##
+## BACKGROUND
+## MACD (Moving Average Convergence-Divergence) stock trading indicator 
+## is one of the ## popular technical oscillators/indicators that is often employed 
+## to enter market for trading securities. Regularly recommended settings 
+## use subtraction of the 26-day exponential moving average (EMA) from the 
+## 12-day EMA (https://www.investopedia.com/terms/m/macd.asp). 
+##    In our R project, we studied a wide range of settings to evaluate financial 
+## return of underlining security trading. We found that optimal settings vary 
+## greatly between securities, and therefore length of the long and short EMA 
+## waves need to be determined specifically for each security. When we model 
+## international index trading, the cumulative financial return with optimal MACD
+## parameters we found was always better than a conservative buy-and-hold 
+## strategy.    
+## 
+## NOTE-1:  this code is designed and written by GitHub user “redsun123“
+##          exclusively for demonstrating of the programming automation
+##          capabilities.  Author of the code does not responsible for any 
+##          financial losses occurred, but is responsible solely for a profit.
+##
+## Upon execution of the main code file "#MACD Indices, ver public.R", 
+## the following events will follow.
+##
+## WORKFLOW
+##   -- download international stock market indices
+##   -- clean data
+##   -- calculate exponential moving averages
+##   -- calculate MACD and MACD-Histogram
+##   -- generate signals to open position
+##   -- emulate the closing of positions in several days and calculate return
+##   -- vary length of the short (signal) and long waves
+##   -- generate reports
+##
+## REPORTING and OUTPUT:
+## REPORT-1: generate summary report (as a *.csv file) with all 
+##           analyzed indices and all returns for the entire time period 
+##           under investigation (approximately three calendar years)
+## REPORT-2: generate heatmap (as a *.PDF file) for each index to 
+##           visualize the best combination of the short and long waves 
+##           to reach maximal return 
+## REPORT-3: compare returns for each index assuming conservative 
+##           buy-and-hold strategy (single *.csv file) versus MACD with 
+##           optimal settings
+##
+## NOTE-1: Main code is in R language. The code invokes additional 
+##         custom functions that are located in a source code in a 
+##         separate file.
+## NOTE-2: code requires configuration of working directory; 
+##         code needs R environment; code.R file should be moved into 
+##         working directory
+## NOTE-3: REPORTs are located in the subdirectory "BGS_Cache" 
+##-----------------------------------------------------------------------------------------
